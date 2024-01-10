@@ -13,6 +13,9 @@
         max-width: 1190px;
     }
     @include xxl-up {
-        max-width: 1280px;
+        max-width: 1380px;
+    }
+    @include xxl-up {
+        max-width: 1600px;
     }
 }

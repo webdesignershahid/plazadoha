@@ -1,15 +1,14 @@
 /*
-Template Name: P
-Template URI: 
-Author: IT Transmit Ltd.
-Author URI: https://www.ittransmit.com
+Template Name: The Plaza Doha Qatar
+Template URI: https://www.theplazadoha.com/
+Author: The Plaza Doha
+Author URI: https://www.theplazadoha.com/
 Description: 
 Version: 1.0.0
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Tiro+Bangla:ital@0;1&display=swap");
 html {
   font-size: 58%;
   -webkit-text-size-adjust: 100%;
@@ -32,9 +31,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: transparent;
-}
-.dark body {
-  color: #FFFFFF;
+  font-family: "FreightBigProBook", sans-serif;
 }
 
 p {
@@ -74,6 +71,7 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
   margin: 0;
   -webkit-font-smoothing: antialiased;
+  font-family: "FreightBigProBook", sans-serif;
 }
 
 h1 a,
@@ -201,7 +199,7 @@ select:-webkit-autofill {
 input:-webkit-autofill:focus {
   box-shadow: 0 0 0rem 100rem rgba(0, 0, 0, 0) inset;
   -webkit-box-shadow: 0 0 0rem 100rem rgba(0, 0, 0, 0) inset;
-  -webkit-text-fill-color: var(--color__body !important);
+  -webkit-text-fill-color: #000000 !important;
 }
 
 .form-control {
@@ -260,7 +258,8 @@ textarea.form-control:focus {
   position: fixed;
   bottom: 3rem;
   right: 3rem;
-  background-color: var(--color__theme);
+  background-color: #FFFFFF;
+  color: #000000;
   width: 5rem;
   height: 5rem;
   display: flex;
@@ -4957,13 +4956,33 @@ textarea.form-control:focus {
 }
 @media screen and (min-width: 1400px) {
   .container {
-    max-width: 1300px;
+    max-width: 1380px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1600px;
   }
 }
 
 /*--------------------------------------------------------------
     [ ## Header ]
 --------------------------------------------------------------*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1024;
+  background-color: rgba(255, 255, 255, 0.85);
+  transition: all 0.25s ease;
+}
+header .left-block a {
+  display: inline-block;
+  user-select: none;
+  padding: 2rem;
+}
+
 /*--------------------------------------------------------------
     [ ## Page Banner]
 --------------------------------------------------------------*/
@@ -4976,5 +4995,14 @@ textarea.form-control:focus {
 /*--------------------------------------------------------------
 # Home Page
 --------------------------------------------------------------*/
+.hero .slider-img {
+  min-height: 80rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.availability_form {
+  padding: 1rem 0;
+}
 
 /*# sourceMappingURL=style.css.map */

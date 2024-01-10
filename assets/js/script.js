@@ -5,7 +5,9 @@
     /* PRELOADER
     /* ============================================================ */
     $(window).on('load', function() {
-        $(".preloader").fadeOut();     
+        setTimeout(function(){
+            $(".preloader").fadeOut();     
+        },500)
     });
 
 
@@ -63,69 +65,70 @@
         swiperCarousel: function () {
 
             // Homepage Signup Side Slider
-            let cabinetCarousel = new Swiper ('.cabinet-carousel .swiper', {
-                spaceBetween: 30,
+            let heroSlider = new Swiper ('#heroSlider', {
+                spaceBetween: 0,
                 slidesPerView: 1,
                 loop: true,
                 speed: 800,
-                autoplay: {
-                    delay: 5000
-                },
-                breakpoints: {
-                    576: {
-                        slidesPerView: 2,
-                    },
-                    768: {
-                        slidesPerView: 3,
-                    },
-                    992: {
-                        slidesPerView: 4,
-                    },
-                    1200: {
-                        slidesPerView: 5,
-                    },
-                },
-                navigation: {
-                    nextEl: ".cabinet-carousel .swiper .swiper-button-next",
-                    prevEl: ".cabinet-carousel .swiper .swiper-button-prev",
-                },
+                effect: 'fade',
+                // autoplay: {
+                //     delay: 5000
+                // },
+                // breakpoints: {
+                //     576: {
+                //         slidesPerView: 2,
+                //     },
+                //     768: {
+                //         slidesPerView: 3,
+                //     },
+                //     992: {
+                //         slidesPerView: 4,
+                //     },
+                //     1200: {
+                //         slidesPerView: 5,
+                //     },
+                // },
+                // navigation: {
+                //     nextEl: ".cabinet-carousel .swiper .swiper-button-next",
+                //     prevEl: ".cabinet-carousel .swiper .swiper-button-prev",
+                // },
             });
             
-            const lightbox = GLightbox({
-                selector: '.glightbox',
-                touchNavigation: true,
-                loop: true,
-                autoplayVideos: false,
-                plyr: {
-                    // css: 'https://cdn.plyr.io/3.5.6/plyr.css', // Default not required to include
-                    // js: 'https://cdn.plyr.io/3.5.6/plyr.js', // Default not required to include
-                    config: {
-                        ratio: '16:9', // or '4:3'
-                        muted: false,
-                        hideControls: true,
-                        youtube: {
-                            noCookie: true,
-                            rel: 0,
-                            showinfo: 0,
-                            iv_load_policy: 3
-                        },
-                        vimeo: {
-                            byline: false,
-                            portrait: false,
-                            title: false,
-                            speed: true,
-                            transparent: false
-                        }
-                    }
-                }
-            });
+            // const lightbox = GLightbox({
+            //     selector: '.glightbox',
+            //     touchNavigation: true,
+            //     loop: true,
+            //     autoplayVideos: false,
+            //     plyr: {
+            //         // css: 'https://cdn.plyr.io/3.5.6/plyr.css', // Default not required to include
+            //         // js: 'https://cdn.plyr.io/3.5.6/plyr.js', // Default not required to include
+            //         config: {
+            //             ratio: '16:9', // or '4:3'
+            //             muted: false,
+            //             hideControls: true,
+            //             youtube: {
+            //                 noCookie: true,
+            //                 rel: 0,
+            //                 showinfo: 0,
+            //                 iv_load_policy: 3
+            //             },
+            //             vimeo: {
+            //                 byline: false,
+            //                 portrait: false,
+            //                 title: false,
+            //                 speed: true,
+            //                 transparent: false
+            //             }
+            //         }
+            //     }
+            // });
         },
 
         /* ============================================================ */
         /* Scroll Top
         /* ============================================================ */
         scroll_to_top: function() {
-            $('body').append("<a href='#' title='Scroll Top' id='scroll-top' class='topbutton btn-hide'><i class='fal fa-angle-double-up'></i></a>");
+            $('body').append("<a href='javascript:void(0)' title='Scroll Top' id='scroll-top' class='topbutton btn-hide'></a>");
             var $scrolltop = $('#scroll-top');
             $(window).on('scroll', function () {
                 if ($(this).scrollTop() > $(this).height()) {
@@ -159,9 +162,6 @@
     //     mobile: false,
     // });
     // wow.init();
-
-    ///============= Select2 =============\\\
-    $('.select2').select2();
 
 
 })(jQuery);
