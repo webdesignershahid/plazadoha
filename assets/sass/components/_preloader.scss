@@ -1,0 +1,11 @@
+.preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 1024;
+    background-color: $color__white;
+    @include flex-center;
+
+    img {
+       width: 25rem;
+    }
+}
