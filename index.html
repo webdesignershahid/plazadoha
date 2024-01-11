@@ -23,12 +23,6 @@
     ================================================== -->
     <link rel="shortcut icon" href="assets/img/favicon.png">
 
-    <!-- Google Fonts
-    ================================================== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-
 
     <!-- All CSS Here
     ================================================== -->
@@ -58,13 +52,40 @@
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <header>
         <div class="container">
-            <nav class="nav">
+            <nav class="nav align-items-center justify-content-between">
                 <div class="left-block">
                     <a href="#">
                         <img src="assets/img/logo.png" class="logo" alt="The Plaza Doha - Qatar">
                     </a>
                 </div>
-                <div class="right-block"></div>
+                <div class="center-block text-center">
+                    Timeless Elegance
+                </div>
+                <div class="right-block d-flex align-items-center">
+                    <ul class="menu d-flex">
+                        <li>
+                            <a href="#">
+                                CONTACT US
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/img/svg/uk-flag.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                BOOK NOW
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="navbar-toggler">
+                        <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1H20M1 8H20M1 15H20" stroke="#4D2322" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
@@ -74,7 +95,7 @@
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Hero
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-    <div class="hero">
+    <section class="hero">
         <div class="swiper" id="heroSlider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -88,14 +109,14 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!--~~./ end Hero ~~-->
 
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Availability Form
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-    <div class="availability_form">
+    <section class="availability_form">
         <div class="container">
             <form action="#">
                 <div class="row align-items-end">
@@ -167,7 +188,7 @@
                 </div>
             </form>
         </div>
-    </div>
+    </section>
     <!--~~./ end Availability Form ~~-->
 
 
@@ -175,7 +196,49 @@
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Intro
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <section class="intro_section">
+        <div class="container">
+            <div class="intro-text text-center">
+                <div class="logo">
+                    <img src="assets/img/logo2.png" alt="The Plaza Doha">
+                </div>
+                <p>
+                    An invitation to discover the meaning of timeless elegance, and embrace a new level of bespoke experience within the city of Doha, Qatar.
+                </p>
+            </div>
 
+            <div class="intro-column">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="image">
+                            <img src="assets/img/hero/hero-img1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text">
+                            <h6>The Hotel</h6>
+                            <h5>Timeless Elegance</h5>
+                            <br>
+                            <p>
+                                The Plaza Doha, LXR Hotels & Resorts invites you to discover the meaning of luxury and embrace a new level of bespoke elegance.
+                            </p>
+                            <p>
+                                Stay in regal sophistication with a choice of rooms and suites infused with classic Parisian flourishes.
+                                Enjoy refined dining in exquisite restaurants. Dip into the rooftop infinity pool and gaze across the seafront cityscape of Qatar’s pearl of the gulf.
+                            </p>
+                            <br>
+                            <a href="#">
+                                KNOW MORE
+                                <span>
+
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--~~./ end Intro ~~-->
 
 
@@ -183,17 +246,40 @@
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Accomodation
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-    <div class="accomodation" style="background-image: url(assets/img/accomodation-bg.png);">
+    <section class="accomodation" style="background-image: url(assets/img/accomodation-bg.png);">
         <div class="container">
-            <div class="section-text text-center">
-                <div class="title-text">
-                    <img src="assets/img/icon/bed-icon.png" alt="">
-                    <h6>ACCOMODATION</h6>
-                    <h4></h4>
-                </div>
+            <div class="section-title text-center">
+                <img src="assets/img/icon/bed-icon.png" class="mb-4" alt="">
+                <h6 class="text-white">ACCOMODATION</h6>
+                <h4 class="text-white">A Perfect Sanctuary</h4>
+            </div>
+            <div class="section-content text-center">
+                <ul>
+                    <li>
+                        <h6>ROOMS</h6>
+                        <p class="text-white">
+                            <a href="#">DELUX</a> | <a href="#">GRAND DELUX</a>
+                        </p>
+                    </li>
+                    <li>
+                        <h6>SUITES</h6>
+                        <p class="text-white">
+                            <a href="#">PREMIUM SUITES</a> | <a href="#">PRESIDENTIAL SUITE</a> | <a href="#">IMPERIAL SUITE</a> | <a href="#">ROYAL SUITE</a>
+                        </p>
+                    </li>
+                    <li>
+                        <h6>RESIDENCES</h6>
+                        <p class="text-white">
+                            <a href="#">PLAZA ONE & TWO BEDROOM SUITES</a> | <a href="#">DELUXE ONE, TWO & THREE BEDROOM SUITES</a>
+                        </p>
+                    </li>
+                </ul>
+                <p>
+                    <a href="#" class="btn-theme">VIEW ALL</a>
+                </p>
             </div>
         </div>
-    </div>
+    </section>
     <!--~~./ end Accomodation ~~-->
 
 
@@ -201,7 +287,68 @@
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Dining
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <section class="dining">
+        <div class="container">
+            <div class="section-title text-center">
+                <img src="assets/img/icon/bed-icon.png" class="mb-4" alt="">
+                <h6>DINING</h6>
+                <h4>Exceptional Gastronomic Journeys</h4>
+            </div>
 
+            <div class="swiper" id="dining_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="dining_item">
+                            <div class="thumbnail">
+                                <img src="assets/img/dining/1.avif" alt="The Courtyard - The Plaza Doha">
+                            </div>
+                            <div class="content text-center">
+                                <h6 class="title">The Courtyard</h6>
+                                <p>
+                                    Enjoy authentic flavors at Doha's finest Paris-inspired restaurant, where you can savor both local and international culinary creations in an opulent venue known for their exceptional presentation and quality.
+                                </p>
+                                <p>
+                                    <a href="#">KNOW MORE</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="dining_item">
+                            <div class="thumbnail">
+                                <img src="assets/img/dining/2.avif" alt="The Courtyard - The Plaza Doha">
+                            </div>
+                            <div class="content text-center">
+                                <h6 class="title">The Courtyard</h6>
+                                <p>
+                                    Enjoy authentic flavors at Doha's finest Paris-inspired restaurant, where you can savor both local and international culinary creations in an opulent venue known for their exceptional presentation and quality.
+                                </p>
+                                <p>
+                                    <a href="#">KNOW MORE</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="dining_item">
+                            <div class="thumbnail">
+                                <img src="assets/img/dining/3.avif" alt="The Courtyard - The Plaza Doha">
+                            </div>
+                            <div class="content text-center">
+                                <h6 class="title">The Courtyard</h6>
+                                <p>
+                                    Enjoy authentic flavors at Doha's finest Paris-inspired restaurant, where you can savor both local and international culinary creations in an opulent venue known for their exceptional presentation and quality.
+                                </p>
+                                <p>
+                                    <a href="#">KNOW MORE</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--~~./ end Dining ~~-->
 
 
@@ -209,7 +356,98 @@
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Area & Activity
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class="areas_activity">
+        <div class="container">
+            <div class="section-title text-center">
+                <img src="assets/img/icon/bed-icon.png" class="mb-4" alt="">
+                <h6>AREAS & ACTIVITIES</h6>
+                <h4>Doha Diversions & Delights</h4>
+            </div>
 
+            <div class="areas_items">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="areas-item">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="assets/img/areas/1.png" alt="">
+                                </a>
+                            </div>
+                            <div class="content">
+                                <div class="title">
+                                    <a href="#">
+                                        ARTS & CULTURE
+
+                                        <span>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
+                                                <path d="M10.001 2.90361e-05C5.95604 -0.000699399 2.3091 2.43578 0.761194 6.17295C-0.786421 9.91027 0.0696256 14.2118 2.93074 17.0712C6.83569 20.9763 13.1666 20.9763 17.0714 17.0712C20.9762 13.1665 20.9762 6.83554 17.0714 2.93053C15.2004 1.04883 12.6545 -0.00638122 10.001 2.90361e-05ZM10.001 19.0715C5.00064 19.0715 0.930626 15.0013 0.930626 10.0009C0.930626 5.00046 5.00064 0.930389 10.001 0.930389C15.0014 0.930389 19.0715 5.00046 19.0715 10.0009C19.0715 15.0013 15.0014 19.0715 10.001 19.0715Z" fill="#C65A24"/>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                                <p>
+                                    Join us as we go behind the scenes with the artists and innovators who are shaping Qatar’s vibrant culture and design scene.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="areas-item">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="assets/img/areas/2.png" alt="">
+                                </a>
+                            </div>
+                            <div class="content">
+                                <div class="title">
+                                    <a href="#">
+                                        SHOPPING
+
+                                        <span>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
+                                                <path d="M10.001 2.90361e-05C5.95604 -0.000699399 2.3091 2.43578 0.761194 6.17295C-0.786421 9.91027 0.0696256 14.2118 2.93074 17.0712C6.83569 20.9763 13.1666 20.9763 17.0714 17.0712C20.9762 13.1665 20.9762 6.83554 17.0714 2.93053C15.2004 1.04883 12.6545 -0.00638122 10.001 2.90361e-05ZM10.001 19.0715C5.00064 19.0715 0.930626 15.0013 0.930626 10.0009C0.930626 5.00046 5.00064 0.930389 10.001 0.930389C15.0014 0.930389 19.0715 5.00046 19.0715 10.0009C19.0715 15.0013 15.0014 19.0715 10.001 19.0715Z" fill="#C65A24"/>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                                <p>
+                                    Prepare to be dazzled by the shopping secrets revealed in our latest issue of Qatar Now. Browse the treasures at Souq Waqif and get fashion inspiration from local tastemakers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="areas-item">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="assets/img/areas/3.png" alt="">
+                                </a>
+                            </div>
+                            <div class="content">
+                                <div class="title">
+                                    <a href="#">
+                                        SPORT ACTIVITIES
+
+                                        <span>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
+                                                <path d="M10.001 2.90361e-05C5.95604 -0.000699399 2.3091 2.43578 0.761194 6.17295C-0.786421 9.91027 0.0696256 14.2118 2.93074 17.0712C6.83569 20.9763 13.1666 20.9763 17.0714 17.0712C20.9762 13.1665 20.9762 6.83554 17.0714 2.93053C15.2004 1.04883 12.6545 -0.00638122 10.001 2.90361e-05ZM10.001 19.0715C5.00064 19.0715 0.930626 15.0013 0.930626 10.0009C0.930626 5.00046 5.00064 0.930389 10.001 0.930389C15.0014 0.930389 19.0715 5.00046 19.0715 10.0009C19.0715 15.0013 15.0014 19.0715 10.001 19.0715Z" fill="#C65A24"/>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                                <p>
+                                    Our latest issue of Qatar Now takes you on a journey across fascinating natural wonders, from pristine shores to the solitude (and exhilaration) of the desert.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--~~./ end Area & Activity ~~-->
 
 
@@ -217,7 +455,104 @@
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Main Amenities
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class="amenities">
+        <div class="container">
+            <div class="section-title text-center">
+                <img src="assets/img/icon/bed-icon.png" class="mb-4" alt="">
+                <h6>MAIN AMENITIES</h6>
+                <h4>Royalty Treatment</h4>
+            </div>
 
+            <div class="amenities_items swiper" id="amenitiesSlider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="amenities_item">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="assets/img/amenities/1.png" alt="">
+                                </a>
+                            </div>
+                            <div class="content text-center">
+                                <div class="title">
+                                    <a href="#">
+                                        Swimming Pool
+                                    </a>
+                                </div>
+                                <p>
+                                    Dive into blissful relaxation from your centrally located Doha hotel. Relax by the pool or swim lengths perched over the city.
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        KNOW MORE
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
+                                            <path d="M10.001 2.90361e-05C5.95604 -0.000699399 2.3091 2.43578 0.761194 6.17295C-0.786421 9.91027 0.0696256 14.2118 2.93074 17.0712C6.83569 20.9763 13.1666 20.9763 17.0714 17.0712C20.9762 13.1665 20.9762 6.83554 17.0714 2.93053C15.2004 1.04883 12.6545 -0.00638122 10.001 2.90361e-05ZM10.001 19.0715C5.00064 19.0715 0.930626 15.0013 0.930626 10.0009C0.930626 5.00046 5.00064 0.930389 10.001 0.930389C15.0014 0.930389 19.0715 5.00046 19.0715 10.0009C19.0715 15.0013 15.0014 19.0715 10.001 19.0715Z" fill="#C65A24"/>
+                                        </svg>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="amenities_item">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="assets/img/amenities/2.png" alt="">
+                                </a>
+                            </div>
+                            <div class="content text-center">
+                                <div class="title">
+                                    <a href="#">
+                                        Fitness Center
+                                    </a>
+                                </div>
+                                <p>
+                                    Find a new rhythm to your routine at our well-equipped fitness centre. Work out with some weights or build pace on the treadmill, with expert trainers to help you with your goals.
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        KNOW MORE
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
+                                            <path d="M10.001 2.90361e-05C5.95604 -0.000699399 2.3091 2.43578 0.761194 6.17295C-0.786421 9.91027 0.0696256 14.2118 2.93074 17.0712C6.83569 20.9763 13.1666 20.9763 17.0714 17.0712C20.9762 13.1665 20.9762 6.83554 17.0714 2.93053C15.2004 1.04883 12.6545 -0.00638122 10.001 2.90361e-05ZM10.001 19.0715C5.00064 19.0715 0.930626 15.0013 0.930626 10.0009C0.930626 5.00046 5.00064 0.930389 10.001 0.930389C15.0014 0.930389 19.0715 5.00046 19.0715 10.0009C19.0715 15.0013 15.0014 19.0715 10.001 19.0715Z" fill="#C65A24"/>
+                                        </svg>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="amenities_item">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="assets/img/amenities/3.png" alt="">
+                                </a>
+                            </div>
+                            <div class="content text-center">
+                                <div class="title">
+                                    <a href="#">
+                                        Kids’ Club
+                                    </a>
+                                </div>
+                                <p>
+                                    Our Kids Club boasts a captivating indoor playground with climbing structures, slides, and creative zones. Enjoy peace of mind in our secure space as your children make friends, explore, and have a blast.
+                                </p>
+                                <p>
+                                    <a href="#">
+                                        KNOW MORE
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
+                                            <path d="M10.001 2.90361e-05C5.95604 -0.000699399 2.3091 2.43578 0.761194 6.17295C-0.786421 9.91027 0.0696256 14.2118 2.93074 17.0712C6.83569 20.9763 13.1666 20.9763 17.0714 17.0712C20.9762 13.1665 20.9762 6.83554 17.0714 2.93053C15.2004 1.04883 12.6545 -0.00638122 10.001 2.90361e-05ZM10.001 19.0715C5.00064 19.0715 0.930626 15.0013 0.930626 10.0009C0.930626 5.00046 5.00064 0.930389 10.001 0.930389C15.0014 0.930389 19.0715 5.00046 19.0715 10.0009C19.0715 15.0013 15.0014 19.0715 10.001 19.0715Z" fill="#C65A24"/>
+                                        </svg>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--~~./ end Main Amenities ~~-->
 
 
@@ -225,7 +560,48 @@
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Events
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class="events" style="background-image: url(assets/img/events-bg.png);">
+        <div class="container">
+            <div class="section-title text-center">
+                <img src="assets/img/icon/bed-icon.png" class="mb-4" alt="">
+                <h6 class="text-white">Weddings & Social Events</h6>
+                <h4 class="text-white"> Palatial Venues For Inspiring Events</h4>
+            </div>
 
+            <div class="section-contents text-center text-white">
+                <h4>
+                    OUR VANUES:
+                </h4>
+                <ul>
+                    <li>
+                        <a href="#">
+                            BALLROOM
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            MAJLIS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            PRE-FUNCTIONAL AREA
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            MEETING ROOMS
+                        </a>
+                    </li>
+                </ul>
+                <p>
+                    <a href="#" class="btn-theme">
+                        VIEW ALL
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
     <!--~~./ end Events ~~-->
 
 
@@ -233,7 +609,19 @@
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Footer
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+    <footer>
+        <div class="container">
+           <div class="brand-logo text-center">
+                <a href="#">
+                    <img src="assets/img/logo-white.png" alt="">
+                </a>
+                <br> <br>
+                <a href="#">
+                    <img src="assets/img/lxr.png" alt="">
+                </a>
+           </div>
+        </div>
+    </footer>
     <!--~~./ end Footer ~~-->
 
 

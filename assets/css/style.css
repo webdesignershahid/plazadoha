@@ -30,8 +30,8 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: transparent;
-  font-family: "FreightBigProBook", sans-serif;
+  background-color: #FAF8F6;
+  font-family: "Gibson", sans-serif;
 }
 
 p {
@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
   margin: 0;
   -webkit-font-smoothing: antialiased;
-  font-family: "FreightBigProBook", sans-serif;
+  font-family: "FreightBigProMedium", sans-serif;
 }
 
 h1 a,
@@ -151,6 +151,10 @@ h6 {
   font-weight: 900;
 }
 
+.font-primary {
+  font-family: "Gibson", sans-serif;
+}
+
 /*-------------------------------------------------
     [ ## Fields ]
 ---------------------------------------------------*/
@@ -212,7 +216,7 @@ textarea.form-control {
   display: block;
   min-height: 15rem;
   padding-top: 0;
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 textarea.form-control:focus {
   outline: none;
@@ -271,6 +275,7 @@ textarea.form-control:focus {
   border-radius: 0.5rem;
   opacity: 0;
   visibility: hidden;
+  z-index: 9999;
 }
 .topbutton.btn-show {
   visibility: visible;
@@ -4977,10 +4982,14 @@ header {
   background-color: rgba(255, 255, 255, 0.85);
   transition: all 0.25s ease;
 }
+header.sticky {
+  box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.95);
+}
 header .left-block a {
   display: inline-block;
   user-select: none;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 /*--------------------------------------------------------------
@@ -4992,6 +5001,11 @@ header .left-block a {
 /*--------------------------------------------------------------
 # Footer-block
 --------------------------------------------------------------*/
+footer {
+  background-color: #091916;
+  padding: 10rem 0 5rem;
+}
+
 /*--------------------------------------------------------------
 # Home Page
 --------------------------------------------------------------*/
@@ -5002,7 +5016,62 @@ header .left-block a {
 }
 
 .availability_form {
-  padding: 1rem 0;
+  padding: 5rem 0;
+  background-color: #F7F4EF;
+}
+
+.intro_section {
+  padding: 10rem 0;
+}
+.intro_section .intro-text {
+  margin-bottom: 10rem;
+}
+.intro_section .intro-text p {
+  font-size: 2.3rem;
+  max-width: 55rem;
+  margin: 4rem auto 0;
+  line-height: 1.4;
+  font-family: "FreightBigProBook", sans-serif;
+}
+.intro_section .intro-column {
+  overflow: hidden;
+}
+.intro_section .intro-column .row {
+  --bs-gutter-x: 5rem;
+}
+
+.accomodation {
+  position: relative;
+  z-index: 1;
+  padding: 10rem 0;
+  background-size: cover;
+  background-position: center;
+}
+.accomodation::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(43, 23, 25, 0.7);
+  z-index: -1;
+}
+
+.dining_item {
+  text-align: center;
+}
+
+.events {
+  position: relative;
+  z-index: 1;
+  padding: 10rem 0;
+  background-size: cover;
+  background-position: center;
+}
+.events::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(43, 23, 25, 0.7);
+  z-index: -1;
 }
 
 /*# sourceMappingURL=style.css.map */

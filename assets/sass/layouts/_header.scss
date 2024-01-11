@@ -7,11 +7,15 @@ header {
     background-color: rgba($color__white, .85);
     transition: all .25s ease;
 
+    &.sticky {
+        box-shadow: 0 0 1.5rem 0 rgba($color__black, .3);
+        background-color: rgba($color__white, .95);
+    }
     .left-block {
         a {
             display: inline-block;
             user-select: none;
-            padding: 2rem;
+            padding: 2rem 0;
         }
     }
 }
