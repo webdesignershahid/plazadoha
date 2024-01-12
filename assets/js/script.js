@@ -11,7 +11,7 @@
     });
 
 
-    var projectName   = {
+    var thePlazaDoha   = {
 
         mobile_expand_menu: function(){
             //=============  Mobile Menu Integration  =============\\
@@ -94,8 +94,8 @@
                 // },
             });
             // Homepage Dining Slider
-            let diningSlider = new Swiper ('#dining_slider, #areas_activity_slider', {
-                spaceBetween: 60,
+            let diningSlider = new Swiper ('#dining_slider, #areas_activity_slider, #amenitiesSlider', {
+                spaceBetween: 15,
                 slidesPerView: 1,
                 loop: true,
                 speed: 800,
@@ -103,60 +103,16 @@
                     delay: 5000
                 },
                 breakpoints: {
-                    576: {
+                    768: {
                         slidesPerView: 2,
+                        spaceBetween: 40,
                     },
-                    992: {
+                    1200: {
                         slidesPerView: 3,
+                        spaceBetween: 60,
                     },
                 },
-            });
-            let amenitiesSlider = new Swiper ('#amenitiesSlider', {
-                spaceBetween: 30,
-                slidesPerView: 1,
-                loop: true,
-                speed: 800,
-                autoplay: {
-                    delay: 5000
-                },
-                breakpoints: {
-                    576: {
-                        slidesPerView: 2,
-                    },
-                    992: {
-                        slidesPerView: 3,
-                    },
-                },
-            });
-            
-            // const lightbox = GLightbox({
-            //     selector: '.glightbox',
-            //     touchNavigation: true,
-            //     loop: true,
-            //     autoplayVideos: false,
-            //     plyr: {
-            //         // css: 'https://cdn.plyr.io/3.5.6/plyr.css', // Default not required to include
-            //         // js: 'https://cdn.plyr.io/3.5.6/plyr.js', // Default not required to include
-            //         config: {
-            //             ratio: '16:9', // or '4:3'
-            //             muted: false,
-            //             hideControls: true,
-            //             youtube: {
-            //                 noCookie: true,
-            //                 rel: 0,
-            //                 showinfo: 0,
-            //                 iv_load_policy: 3
-            //             },
-            //             vimeo: {
-            //                 byline: false,
-            //                 portrait: false,
-            //                 title: false,
-            //                 speed: true,
-            //                 transparent: false
-            //             }
-            //         }
-            //     }
-            // });
+            });            
         },
 
         /* ============================================================ */
@@ -189,14 +145,14 @@
         },
 
         initialize: function() {0
-			projectName.mobile_expand_menu();
-			projectName.scroll_to_top();
-			projectName.sticky_header();
-			projectName.swiperCarousel();
+			thePlazaDoha.mobile_expand_menu();
+			thePlazaDoha.scroll_to_top();
+			thePlazaDoha.sticky_header();
+			thePlazaDoha.swiperCarousel();
 		}
     };
     $(function() {
-		projectName  .initialize();
+		thePlazaDoha  .initialize();
 	});
     ///============= Wow JS =============\\\
     // wow = new WOW({

@@ -1,8 +1,18 @@
 .hero {
     .slider-img {
-        min-height: 80rem;
+        min-height: 50rem;
         background-size: cover;
         background-position: center;
+
+        @include sm-up {
+            min-height: 60rem;
+        }
+        @include xxl-up {
+            min-height: 70rem;
+        }
+        @include xxxl-up {
+            min-height: 80rem;
+        }
     }
 }
 
@@ -11,7 +21,14 @@
     background-color: #F7F4EF;
     overflow: hidden;
     .row {
-        --bs-gutter-x: 10rem
+        --bs-gutter-x: 4rem;
+        
+        @include xxl-up {
+            --bs-gutter-x: 6rem;
+        }
+        @include xxxl-up {
+            --bs-gutter-x: 10rem;
+        }
     }
     .form-group {
         label {
@@ -50,7 +67,7 @@
         font-family: $font__primary;
         font-weight: 500;
         color: $color__theme;
-        font-size: 2rem;
+        font-size: 1.7rem;
         padding: 1.5rem;
         width: 100%;
         transition: all .25s ease-in-out;
@@ -69,6 +86,9 @@
     .intro-text {
         padding: 10rem 0;
         background-color: $color__white;
+        @include xl-down {
+            padding: 6rem 0;
+        }
     }
     .logo {
         user-select: none;
@@ -88,16 +108,42 @@
         overflow: hidden;
         background-color: rgba(#F4F1EC, .4);
         padding: 10rem 0;
+        @include xl-down {
+            padding: 6rem 0;
+        }
 
         .row {
-            --bs-gutter-x: 8rem;
+            --bs-gutter-x: 2rem;
+            
+            @include xl-up {
+                --bs-gutter-x: 4rem;
+            }
+            @include xxl-up {
+                --bs-gutter-x: 6rem;
+            }
+            @include xxxl-up {
+                --bs-gutter-x: 8rem;
+            }
+        }
+        .section-title, .section-content {
+            @include lg-down {
+                text-align: center;
+            }
+        }
+        .image img {
+            @include minmax(992px, 1199px) {
+                min-height: 35rem;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
         }
         .section-content {
             @include xl-up {
                 max-width: 55rem;
             }
             p {
-                line-height: 1.5;
+                line-height: 1.4;
                 font-weight: 500;
 
                 & + p {
@@ -203,7 +249,7 @@
                 margin: 2rem;
                 line-height: 1.4;
                 display: -webkit-box;
-                -webkit-line-clamp: 4;
+                -webkit-line-clamp: 3;
                 -webkit-box-orient: vertical;  
                 overflow: hidden;
             }
@@ -246,7 +292,7 @@
                 margin: 2rem;
                 line-height: 1.4;
                 display: -webkit-box;
-                -webkit-line-clamp: 4;
+                -webkit-line-clamp: 3;
                 -webkit-box-orient: vertical;  
                 overflow: hidden;
             }
@@ -288,7 +334,7 @@
                 margin: 2rem;
                 line-height: 1.4;
                 display: -webkit-box;
-                -webkit-line-clamp: 4;
+                -webkit-line-clamp: 3;
                 -webkit-box-orient: vertical;  
                 overflow: hidden;
             }
@@ -323,7 +369,7 @@
     .section-contents {
         .title {
             font-size: 2.6rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
 
         ul {
@@ -331,6 +377,12 @@
                 a {
                     font-size: 2.4rem;
                     color: #E6DED0;
+                    transition: all .25s ease;
+
+                    &:hover {
+                        color: $color__white;
+                        letter-spacing: .05rem;
+                    }
                 }
                 & + li {
                     margin-top: 3rem;

@@ -22,17 +22,18 @@
     <!-- Site Favicon
     ================================================== -->
     <link rel="shortcut icon" href="assets/img/favicon.png">
+    
 
+    <!-- Custom Fonts
+    ================================================== -->
+    <link rel="stylesheet" href="assets/webfonts/stylesheet.css">
 
     <!-- All CSS Here
     ================================================== -->
-    <link rel="stylesheet" href="assets/webfonts/stylesheet.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="assets/css/animate.css"> -->
+    <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <!-- <link rel="stylesheet" href="assets/css/glightbox.min.css"> -->
-    <!-- <link rel="stylesheet" href="assets/css/select2.min.css"> -->
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -56,7 +57,10 @@
             <nav class="nav align-items-center justify-content-between">
                 <div class="left-block">
                     <a href="#">
-                        <img src="assets/img/logo.png" class="logo" alt="The Plaza Doha - Qatar">
+                        <img src="assets/img/logo.png" class="logo d-none d-lg-block" alt="The Plaza Doha - Qatar">
+                    </a>
+                    <a href="#">
+                        <img src="assets/img/main-logo.png" class="mobile-logo d-lg-none" alt="The Plaza Doha - Qatar">
                     </a>
                 </div>
                 <div class="center-block">
@@ -89,6 +93,14 @@
             </nav>
         </div>
     </header>
+
+    <div class="drawerMenu">
+        <button type="button" class="closeMenu">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.918415 0.918415C1.47632 0.360528 2.38083 0.360528 2.93873 0.918415L10.5 8.47973L18.0613 0.918415C18.6192 0.360528 19.5237 0.360528 20.0816 0.918415C20.6395 1.47632 20.6395 2.38083 20.0816 2.93873L12.5203 10.5L20.0816 18.0613C20.6395 18.6192 20.6395 19.5237 20.0816 20.0816C19.5237 20.6395 18.6192 20.6395 18.0613 20.0816L10.5 12.5203L2.93873 20.0816C2.38083 20.6395 1.47632 20.6395 0.918415 20.0816C0.360528 19.5237 0.360528 18.6192 0.918415 18.0613L8.47973 10.5L0.918415 2.93873C0.360528 2.38083 0.360528 1.47632 0.918415 0.918415Z" fill="#4D2322"/>
+            </svg>
+        </button>
+    </div>
     <!--~~./ end Header ~~-->
 
 
@@ -119,8 +131,8 @@
     <section class="availability_form">
         <div class="container">
             <form action="#">
-                <div class="row align-items-end">
-                    <div class="col-md-3">
+                <div class="row align-items-end gy-4">
+                    <div class="col-sm-6 col-lg-3">
                         <div class="form-group">
                             <label>ARRIVAL DATE</label>
                             <div class="input-group">
@@ -139,7 +151,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-sm-6 col-lg-3">
                         <div class="form-group">
                             <label>DEPARTURE DATE</label>
                             <div class="input-group">
@@ -158,7 +170,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-sm-6 col-lg-3">
                         <div class="form-group">
                             <label>GUESTS</label>
                             <div class="input-group">
@@ -178,7 +190,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-sm-6 col-lg-3">
                         <div class="form-group">
                             <button type="submit" class="">
                                 CHECK AVAILABILITY
@@ -209,13 +221,13 @@
         </div>
         <div class="intro-column">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
+                <div class="row align-items-center justify-content-center gy-4 ">
+                    <div class="col-md-10 col-lg-6">
                         <div class="image">
                             <img src="assets/img/hero/hero-img1.png" alt="">
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-lg-6">
                         <div class="section-title">
                             <h6 class="subtitle">The Hotel</h6>
                             <h4 class="title">Timeless Elegance</h4>
@@ -700,13 +712,9 @@
     ================================================== -->
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
-    <!-- <script src="assets/js/theme.js"></script> -->
-    <!-- <script src="assets/js/wow.min.js"></script> -->
+    <script src="assets/js/flatpickr.js"></script>
+    <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
-    <!-- <script src="assets/js/glightbox.min.js"></script> -->
-    <!-- <script src="assets/js/select2.full.min.js"></script> -->
     <script src="assets/js/script.js"></script>
 
     <script>

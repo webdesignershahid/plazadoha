@@ -298,6 +298,11 @@ textarea.form-control:focus {
   font-size: 4.5rem;
   font-family: "FreightBigProBook", sans-serif;
 }
+@media screen and (max-width: 991px) {
+  .section-title .title {
+    font-size: 3.5rem;
+  }
+}
 
 .topbutton {
   position: fixed;
@@ -5045,7 +5050,7 @@ textarea.form-control:focus {
     max-width: 1380px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1900px) {
   .container {
     max-width: 1600px;
   }
@@ -5053,6 +5058,9 @@ textarea.form-control:focus {
 
 /*--------------------------------------------------------------
     [ ## Header ]
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Header-block Start
 --------------------------------------------------------------*/
 header {
   position: fixed;
@@ -5072,16 +5080,34 @@ header .left-block a {
   user-select: none;
   padding: 2rem 0;
 }
+@media screen and (max-width: 767px) {
+  header .left-block a {
+    padding: 1rem 0;
+  }
+}
+header .left-block .mobile-logo {
+  max-width: 8rem;
+}
 header .center-block {
   text-align: center;
   font: italic 4.4rem/normal "FreightBigProBook", sans-serif;
   color: #A4832C;
   user-select: none;
 }
+@media screen and (max-width: 991px) {
+  header .center-block {
+    display: none;
+  }
+}
 header .right-block {
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+@media screen and (max-width: 575px) {
+  header .right-block {
+    gap: 1rem;
+  }
 }
 header .right-block .menu {
   display: flex;
@@ -5095,6 +5121,11 @@ header .right-block .menu li + li::before {
   color: #C65A24;
   margin: 0 1rem;
 }
+@media screen and (max-width: 575px) {
+  header .right-block .menu li + li::before {
+    margin: 0 0.5rem;
+  }
+}
 header .right-block .menu a {
   transition: all 0.2s;
   font-size: 1.4rem;
@@ -5103,6 +5134,9 @@ header .right-block .menu a:hover {
   color: #C65A24;
 }
 
+/*--------------------------------------------------------------
+# Header-block End
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
     [ ## Page Banner]
 --------------------------------------------------------------*/
@@ -5125,6 +5159,12 @@ footer .contact-info a {
   font-size: 1.8rem;
   color: #EEE9E1;
 }
+footer .footer-menu a {
+  transition: all 0.15s ease;
+}
+footer .footer-menu a:hover {
+  color: #FFFFFF;
+}
 footer .social-contacts {
   border: 0.1rem solid #C65A24;
   display: inline-flex;
@@ -5146,9 +5186,24 @@ footer .copyright {
 # Home Page
 --------------------------------------------------------------*/
 .hero .slider-img {
-  min-height: 80rem;
+  min-height: 50rem;
   background-size: cover;
   background-position: center;
+}
+@media screen and (min-width: 576px) {
+  .hero .slider-img {
+    min-height: 60rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .hero .slider-img {
+    min-height: 70rem;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .hero .slider-img {
+    min-height: 80rem;
+  }
 }
 
 .availability_form {
@@ -5157,7 +5212,17 @@ footer .copyright {
   overflow: hidden;
 }
 .availability_form .row {
-  --bs-gutter-x: 10rem ;
+  --bs-gutter-x: 4rem;
+}
+@media screen and (min-width: 1400px) {
+  .availability_form .row {
+    --bs-gutter-x: 6rem;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .availability_form .row {
+    --bs-gutter-x: 10rem;
+  }
 }
 .availability_form .form-group label {
   text-align: center;
@@ -5191,7 +5256,7 @@ footer .copyright {
   font-family: "Gibson", sans-serif;
   font-weight: 500;
   color: #C65A24;
-  font-size: 2rem;
+  font-size: 1.7rem;
   padding: 1.5rem;
   width: 100%;
   transition: all 0.25s ease-in-out;
@@ -5206,6 +5271,11 @@ footer .copyright {
 .intro_section .intro-text {
   padding: 10rem 0;
   background-color: #FFFFFF;
+}
+@media screen and (max-width: 1199px) {
+  .intro_section .intro-text {
+    padding: 6rem 0;
+  }
 }
 .intro_section .logo {
   user-select: none;
@@ -5222,8 +5292,41 @@ footer .copyright {
   background-color: rgba(244, 241, 236, 0.4);
   padding: 10rem 0;
 }
+@media screen and (max-width: 1199px) {
+  .intro_section .intro-column {
+    padding: 6rem 0;
+  }
+}
 .intro_section .intro-column .row {
-  --bs-gutter-x: 8rem;
+  --bs-gutter-x: 2rem;
+}
+@media screen and (min-width: 1200px) {
+  .intro_section .intro-column .row {
+    --bs-gutter-x: 4rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .intro_section .intro-column .row {
+    --bs-gutter-x: 6rem;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .intro_section .intro-column .row {
+    --bs-gutter-x: 8rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .intro_section .intro-column .section-title, .intro_section .intro-column .section-content {
+    text-align: center;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .intro_section .intro-column .image img {
+    min-height: 35rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 @media screen and (min-width: 1200px) {
   .intro_section .intro-column .section-content {
@@ -5231,7 +5334,7 @@ footer .copyright {
   }
 }
 .intro_section .intro-column .section-content p {
-  line-height: 1.5;
+  line-height: 1.4;
   font-weight: 500;
 }
 .intro_section .intro-column .section-content p + p {
@@ -5319,7 +5422,7 @@ footer .copyright {
   margin: 2rem;
   line-height: 1.4;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -5355,7 +5458,7 @@ footer .copyright {
   margin: 2rem;
   line-height: 1.4;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -5391,7 +5494,7 @@ footer .copyright {
   margin: 2rem;
   line-height: 1.4;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -5419,11 +5522,16 @@ footer .copyright {
 }
 .events .section-contents .title {
   font-size: 2.6rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .events .section-contents ul li a {
   font-size: 2.4rem;
   color: #E6DED0;
+  transition: all 0.25s ease;
+}
+.events .section-contents ul li a:hover {
+  color: #FFFFFF;
+  letter-spacing: 0.05rem;
 }
 .events .section-contents ul li + li {
   margin-top: 3rem;

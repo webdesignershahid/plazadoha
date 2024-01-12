@@ -17,7 +17,15 @@ footer {
             color: #EEE9E1;
         }
     }
+    .footer-menu {
+        a {
+            transition: all .15s ease;
 
+            &:hover {
+                color: $color__white
+            }
+        }
+    }
     .social-contacts {
         border: .1rem solid $color__theme;
         display: inline-flex;
