@@ -32,6 +32,7 @@ body {
   padding: 0;
   background-color: #FAF8F6;
   font-family: "Gibson", sans-serif;
+  color: #091916;
 }
 
 p {
@@ -155,6 +156,10 @@ h6 {
   font-family: "Gibson", sans-serif;
 }
 
+.text-theme {
+  color: #C65A24;
+}
+
 /*-------------------------------------------------
     [ ## Fields ]
 ---------------------------------------------------*/
@@ -176,6 +181,24 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+
+input[type=time]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
 }
 
 input[type=search] {
@@ -258,6 +281,24 @@ textarea.form-control:focus {
   display: block;
 }
 
+.section-title {
+  margin-bottom: 3rem;
+}
+.section-title img {
+  user-select: none;
+}
+.section-title .subtitle {
+  color: #C65A24;
+  font-size: 2.4rem;
+  font-family: "FreightBigProBook", sans-serif;
+}
+.section-title .title {
+  color: #C65A24;
+  font-style: italic;
+  font-size: 4.5rem;
+  font-family: "FreightBigProBook", sans-serif;
+}
+
 .topbutton {
   position: fixed;
   bottom: 3rem;
@@ -280,6 +321,46 @@ textarea.form-control:focus {
 .topbutton.btn-show {
   visibility: visible;
   opacity: 1;
+}
+
+.btn-theme {
+  background-color: #C65A24;
+  color: #FFFFFF;
+  padding: 1.25rem 3.5rem;
+  display: inline-flex;
+  font-size: 1.6rem;
+  transition: all 0.25s ease;
+}
+.btn-theme:hover {
+  background-color: #A4832C;
+  color: #FFFFFF;
+  letter-spacing: 0.1rem;
+}
+
+.text-link {
+  color: #C65A24;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  line-height: normal;
+  transition: all 0.2s ease;
+  user-select: none;
+  text-decoration: none;
+}
+.text-link:hover {
+  gap: 1.5rem;
+  letter-spacing: 0.1rem;
+  color: #C65A24;
+}
+
+.flatpickr-day.selected {
+  background: #A4832C;
+  border-color: #A4832C;
+  color: #FFFFFF;
+}
+.flatpickr-day.selected:hover {
+  background: #C65A24;
+  border-color: #A4832C;
 }
 
 .glightbox-clean .gslide-title {
@@ -4991,6 +5072,36 @@ header .left-block a {
   user-select: none;
   padding: 2rem 0;
 }
+header .center-block {
+  text-align: center;
+  font: italic 4.4rem/normal "FreightBigProBook", sans-serif;
+  color: #A4832C;
+  user-select: none;
+}
+header .right-block {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+header .right-block .menu {
+  display: flex;
+}
+header .right-block .menu li {
+  line-height: normal;
+}
+header .right-block .menu li + li::before {
+  content: "|";
+  display: inline-block;
+  color: #C65A24;
+  margin: 0 1rem;
+}
+header .right-block .menu a {
+  transition: all 0.2s;
+  font-size: 1.4rem;
+}
+header .right-block .menu a:hover {
+  color: #C65A24;
+}
 
 /*--------------------------------------------------------------
     [ ## Page Banner]
@@ -5018,13 +5129,61 @@ footer {
 .availability_form {
   padding: 5rem 0;
   background-color: #F7F4EF;
+  overflow: hidden;
+}
+.availability_form .row {
+  --bs-gutter-x: 10rem ;
+}
+.availability_form .form-group label {
+  text-align: center;
+  display: block;
+}
+.availability_form .form-group .form-control {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 0.1rem solid #C65A24;
+  font-family: "FreightBigProLight", sans-serif;
+  color: #C65A24;
+  font-size: 3rem;
+  text-align: center;
+  border-radius: 0;
+}
+.availability_form .form-group .form-control:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.availability_form .form-group .input-group-text {
+  background-color: transparent;
+  border-radius: 0;
+  border: 0;
+  border-bottom: 0.1rem solid #C65A24;
+}
+.availability_form button[type=submit] {
+  border: 0.1rem solid #C65A24;
+  background-color: transparent;
+  border-top: 0;
+  border-left: 0;
+  font-family: "Gibson", sans-serif;
+  font-weight: 500;
+  color: #C65A24;
+  font-size: 2rem;
+  padding: 1.5rem;
+  width: 100%;
+  transition: all 0.25s ease-in-out;
+  user-select: none;
+}
+.availability_form button[type=submit]:hover, .availability_form button[type=submit]:focus {
+  background-color: #C65A24;
+  color: #FFFFFF;
+  outline: 0;
 }
 
-.intro_section {
-  padding: 10rem 0;
-}
 .intro_section .intro-text {
-  margin-bottom: 10rem;
+  padding: 10rem 0;
+  background-color: #FFFFFF;
+}
+.intro_section .logo {
+  user-select: none;
 }
 .intro_section .intro-text p {
   font-size: 2.3rem;
@@ -5035,9 +5194,39 @@ footer {
 }
 .intro_section .intro-column {
   overflow: hidden;
+  background-color: rgba(244, 241, 236, 0.4);
+  padding: 10rem 0;
 }
 .intro_section .intro-column .row {
-  --bs-gutter-x: 5rem;
+  --bs-gutter-x: 8rem;
+}
+@media screen and (min-width: 1200px) {
+  .intro_section .intro-column .section-content {
+    max-width: 55rem;
+  }
+}
+.intro_section .intro-column .section-content p {
+  line-height: 1.5;
+  font-weight: 500;
+}
+.intro_section .intro-column .section-content p + p {
+  margin-top: 0.5rem;
+}
+.intro_section .intro-column .section-content .link {
+  color: #C65A24;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  line-height: normal;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+.intro_section .intro-column .section-content .link:hover {
+  gap: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+.intro_section .intro-column .section-content .read-more {
+  margin-top: 3rem;
 }
 
 .accomodation {
@@ -5054,9 +5243,135 @@ footer {
   background-color: rgba(43, 23, 25, 0.7);
   z-index: -1;
 }
+.accomodation .section-title {
+  margin-bottom: 4rem;
+}
+.accomodation .section-content .title {
+  color: #EAE3DA;
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.accomodation .section-content p a {
+  color: #E6DED0;
+  font-size: 1.8rem;
+}
+.accomodation .section-content p a:hover {
+  color: #C65A24;
+}
+.accomodation .section-content li + li {
+  margin-top: 3rem;
+}
+.accomodation .section-content .read-more {
+  margin-top: 5rem;
+}
 
+.dining {
+  padding: 10rem 0 7rem;
+}
+.dining .section-title {
+  margin-bottom: 6rem;
+}
 .dining_item {
   text-align: center;
+}
+.dining_item .thumbnail {
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+.dining_item .thumbnail img {
+  max-height: 30rem;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.25s ease;
+}
+.dining_item .content .title {
+  font-size: 3rem;
+  font-style: italic;
+}
+.dining_item .content p {
+  margin: 2rem 1rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.dining_item:hover .thumbnail img {
+  transform: scale(1.15);
+}
+
+.areas_activity {
+  padding: 7rem 0;
+}
+.areas_activity .section-title {
+  margin-bottom: 6rem;
+}
+.areas_activity_item {
+  text-align: center;
+}
+.areas_activity_item .thumbnail {
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+.areas_activity_item .thumbnail img {
+  max-height: 30rem;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.25s ease;
+}
+.areas_activity_item .content .title {
+  font-size: 3rem;
+  font-style: italic;
+}
+.areas_activity_item .content p {
+  margin: 2rem 1rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.areas_activity_item:hover .thumbnail img {
+  transform: scale(1.15);
+}
+
+.amenities {
+  padding: 7rem 0 10rem;
+}
+.amenities .section-title {
+  margin-bottom: 6rem;
+}
+.amenities_item {
+  text-align: center;
+}
+.amenities_item .thumbnail {
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+.amenities_item .thumbnail img {
+  max-height: 30rem;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.25s ease;
+}
+.amenities_item .content .title {
+  font-size: 3rem;
+  font-style: italic;
+}
+.amenities_item .content p {
+  margin: 2rem 1rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.amenities_item:hover .thumbnail img {
+  transform: scale(1.15);
 }
 
 .events {

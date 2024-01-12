@@ -1,0 +1,17 @@
+.section-title {
+    margin-bottom: 3rem;
+    img {
+        user-select: none;
+    }
+    .subtitle {
+        color: $color__theme;
+        font-size: 2.4rem;
+        font-family: $font__freight_book;
+    }
+    .title {
+        color: $color__theme;
+        font-style: italic;
+        font-size: 4.5rem;
+        font-family: $font__freight_book;
+    }
+}

@@ -20,3 +20,34 @@
         opacity: 1;
     }
 }
+
+.btn-theme {
+    background-color: $color__theme;
+    color: $color__white;
+    padding: 1.25rem 3.5rem;
+    display: inline-flex;
+    font-size: 1.6rem;
+    transition: all .25s ease;
+
+    &:hover {
+        background-color: $color__secondary;
+        color: $color__white;
+        letter-spacing: .1rem;
+    }
+}
+
+.text-link {
+    color: $color__theme;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    line-height: normal;
+    transition: all .2s ease;
+    user-select: none;
+    text-decoration: none;
+    &:hover {
+        gap: 1.5rem;
+        letter-spacing: .1rem;
+        color: $color__theme;
+    }
+}

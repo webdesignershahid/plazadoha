@@ -18,4 +18,38 @@ header {
             padding: 2rem 0;
         }
     }
+    .center-block {
+        text-align: center;
+        font: italic 4.4rem/normal $font__freight_book;
+        color: $color__secondary;
+        user-select: none;
+    }
+    .right-block {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        .menu {
+            display: flex;            
+
+            li {
+                line-height: normal;
+                & + li {
+                    &::before {
+                        content: '|';
+                        display: inline-block;
+                        color: $color__theme;
+                        margin: 0 1rem;
+                    }
+                }
+            }
+            a {
+                transition: all .2s;
+                font-size: 1.4rem;
+                &:hover {
+                    color: $color__theme;
+                }
+            }
+        }
+    }
 }

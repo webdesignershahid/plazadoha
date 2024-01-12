@@ -1,0 +1,11 @@
+// FlatPicker 
+.flatpickr-day.selected {
+    background: $color__secondary;
+    border-color: $color__secondary;
+    color: $color__white;
+
+    &:hover {
+        background: $color__theme;
+        border-color: $color__secondary;
+    }
+}

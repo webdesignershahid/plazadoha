@@ -94,8 +94,8 @@
                 // },
             });
             // Homepage Dining Slider
-            let diningSlider = new Swiper ('#dining_slider', {
-                spaceBetween: 30,
+            let diningSlider = new Swiper ('#dining_slider, #areas_activity_slider', {
+                spaceBetween: 60,
                 slidesPerView: 1,
                 loop: true,
                 speed: 800,

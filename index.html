@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="assets/css/animate.css"> -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <!-- <link rel="stylesheet" href="assets/css/glightbox.min.css"> -->
     <!-- <link rel="stylesheet" href="assets/css/select2.min.css"> -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -58,11 +59,11 @@
                         <img src="assets/img/logo.png" class="logo" alt="The Plaza Doha - Qatar">
                     </a>
                 </div>
-                <div class="center-block text-center">
+                <div class="center-block">
                     Timeless Elegance
                 </div>
-                <div class="right-block d-flex align-items-center">
-                    <ul class="menu d-flex">
+                <div class="right-block">
+                    <ul class="menu">
                         <li>
                             <a href="#">
                                 CONTACT US
@@ -82,8 +83,7 @@
                     <button class="navbar-toggler">
                         <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 1H20M1 8H20M1 15H20" stroke="#4D2322" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            
+                        </svg>
                     </button>
                 </div>
             </nav>
@@ -124,7 +124,7 @@
                         <div class="form-group">
                             <label>ARRIVAL DATE</label>
                             <div class="input-group">
-                                <input type="date" class="form-control">
+                                <input type="date" class="form-control datepicker" id="arrivalDate">
                                 <span class="input-group-text">
                                     <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M18.2079 2.34522H17.6427V1.72298C17.6427 0.991205 17.047 0.395508 16.3152 0.395508H15.9075C15.1758 0.395508 14.5801 0.991205 14.5801 1.72298V2.34522H6.80495V1.72298C6.80495 0.991205 6.20926 0.395508 5.47748 0.395508H5.06981C4.33803 0.395508 3.74234 0.991205 3.74234 1.72298V2.34522H3.21609C1.66558 2.34522 0.404175 3.60663 0.404175 5.15713V18.1885C0.404175 19.739 1.66558 21.0004 3.21609 21.0004H18.2079C19.7584 21.0004 21.0198 19.739 21.0198 18.1885V5.15713C21.0198 3.60663 19.7584 2.34522 18.2079 2.34522ZM15.2571 1.72298C15.2571 1.36443 15.5484 1.07308 15.907 1.07308H16.3147C16.6732 1.07308 16.9646 1.36443 16.9646 1.72298V3.84208C16.9646 4.20063 16.6732 4.49198 16.3147 4.49198H15.907C15.5484 4.49198 15.2571 4.20063 15.2571 3.84208V1.72298ZM4.41934 1.72298C4.41934 1.36443 4.71126 1.07308 5.06925 1.07308H5.47692C5.83546 1.07308 6.12682 1.36443 6.12682 1.72298V3.84208C6.12682 4.20063 5.83546 4.49198 5.47692 4.49198H5.06925C4.7107 4.49198 4.41934 4.20063 4.41934 3.84208V1.72298ZM3.21553 3.02279H3.74177V3.84152C3.74177 4.57329 4.33747 5.16899 5.06925 5.16899H5.47692C6.20869 5.16899 6.80439 4.57329 6.80439 3.84152V3.02279H14.5795V3.84152C14.5795 4.57329 15.1752 5.16899 15.907 5.16899H16.3147C17.0464 5.16899 17.6421 4.57329 17.6421 3.84152V3.02279H18.2073C19.3846 3.02279 20.3417 3.98042 20.3417 5.15713V7.92839H1.08118V5.15713C1.08118 3.97985 2.03881 3.02279 3.21553 3.02279ZM18.2079 20.3234H3.21553C2.03825 20.3234 1.08118 19.3658 1.08118 18.1891V8.60596H20.3422V18.1885C20.3422 19.3658 19.3846 20.3228 18.2079 20.3228V20.3234Z" fill="#C65A24"/>
@@ -143,7 +143,7 @@
                         <div class="form-group">
                             <label>DEPARTURE DATE</label>
                             <div class="input-group">
-                                <input type="date" class="form-control">
+                                <input type="date" class="form-control datepicker" id="departureDate">
                                 <span class="input-group-text">
                                     <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M18.2079 2.34522H17.6427V1.72298C17.6427 0.991205 17.047 0.395508 16.3152 0.395508H15.9075C15.1758 0.395508 14.5801 0.991205 14.5801 1.72298V2.34522H6.80495V1.72298C6.80495 0.991205 6.20926 0.395508 5.47748 0.395508H5.06981C4.33803 0.395508 3.74234 0.991205 3.74234 1.72298V2.34522H3.21609C1.66558 2.34522 0.404175 3.60663 0.404175 5.15713V18.1885C0.404175 19.739 1.66558 21.0004 3.21609 21.0004H18.2079C19.7584 21.0004 21.0198 19.739 21.0198 18.1885V5.15713C21.0198 3.60663 19.7584 2.34522 18.2079 2.34522ZM15.2571 1.72298C15.2571 1.36443 15.5484 1.07308 15.907 1.07308H16.3147C16.6732 1.07308 16.9646 1.36443 16.9646 1.72298V3.84208C16.9646 4.20063 16.6732 4.49198 16.3147 4.49198H15.907C15.5484 4.49198 15.2571 4.20063 15.2571 3.84208V1.72298ZM4.41934 1.72298C4.41934 1.36443 4.71126 1.07308 5.06925 1.07308H5.47692C5.83546 1.07308 6.12682 1.36443 6.12682 1.72298V3.84208C6.12682 4.20063 5.83546 4.49198 5.47692 4.49198H5.06925C4.7107 4.49198 4.41934 4.20063 4.41934 3.84208V1.72298ZM3.21553 3.02279H3.74177V3.84152C3.74177 4.57329 4.33747 5.16899 5.06925 5.16899H5.47692C6.20869 5.16899 6.80439 4.57329 6.80439 3.84152V3.02279H14.5795V3.84152C14.5795 4.57329 15.1752 5.16899 15.907 5.16899H16.3147C17.0464 5.16899 17.6421 4.57329 17.6421 3.84152V3.02279H18.2073C19.3846 3.02279 20.3417 3.98042 20.3417 5.15713V7.92839H1.08118V5.15713C1.08118 3.97985 2.03881 3.02279 3.21553 3.02279ZM18.2079 20.3234H3.21553C2.03825 20.3234 1.08118 19.3658 1.08118 18.1891V8.60596H20.3422V18.1885C20.3422 19.3658 19.3846 20.3228 18.2079 20.3228V20.3234Z" fill="#C65A24"/>
@@ -180,7 +180,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="form-group">
-                            <button type="submit" class="form-control">
+                            <button type="submit" class="">
                                 CHECK AVAILABILITY
                             </button>
                         </div>
@@ -197,8 +197,8 @@
     Start Intro
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <section class="intro_section">
-        <div class="container">
-            <div class="intro-text text-center">
+        <div class="intro-text text-center">
+            <div class="container">
                 <div class="logo">
                     <img src="assets/img/logo2.png" alt="The Plaza Doha">
                 </div>
@@ -206,8 +206,9 @@
                     An invitation to discover the meaning of timeless elegance, and embrace a new level of bespoke experience within the city of Doha, Qatar.
                 </p>
             </div>
-
-            <div class="intro-column">
+        </div>
+        <div class="intro-column">
+            <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <div class="image">
@@ -215,24 +216,31 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="text">
-                            <h6>The Hotel</h6>
-                            <h5>Timeless Elegance</h5>
-                            <br>
+                        <div class="section-title">
+                            <h6 class="subtitle">The Hotel</h6>
+                            <h4 class="title">Timeless Elegance</h4>
+                        </div>
+                        <div class="section-content">
                             <p>
                                 The Plaza Doha, LXR Hotels & Resorts invites you to discover the meaning of luxury and embrace a new level of bespoke elegance.
                             </p>
                             <p>
                                 Stay in regal sophistication with a choice of rooms and suites infused with classic Parisian flourishes.
-                                Enjoy refined dining in exquisite restaurants. Dip into the rooftop infinity pool and gaze across the seafront cityscape of Qatar’s pearl of the gulf.
                             </p>
-                            <br>
-                            <a href="#">
-                                KNOW MORE
-                                <span>
-
-                                </span>
-                            </a>
+                            <p>
+                                Enjoy refined dining in exquisite restaurants. Dip into the rooftop infinity pool and gaze across the seafront cityscape of Qatar's pearl of the gulf.
+                            </p>
+                            <div class="read-more">
+                                <a href="#" class="text-link">
+                                    KNOW MORE
+                                    <span>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
+                                            <path d="M10.001 2.90361e-05C5.95604 -0.000699399 2.3091 2.43578 0.761194 6.17295C-0.786421 9.91027 0.0696256 14.2118 2.93074 17.0712C6.83569 20.9763 13.1666 20.9763 17.0714 17.0712C20.9762 13.1665 20.9762 6.83554 17.0714 2.93053C15.2004 1.04883 12.6545 -0.00638122 10.001 2.90361e-05ZM10.001 19.0715C5.00064 19.0715 0.930626 15.0013 0.930626 10.0009C0.930626 5.00046 5.00064 0.930389 10.001 0.930389C15.0014 0.930389 19.0715 5.00046 19.0715 10.0009C19.0715 15.0013 15.0014 19.0715 10.001 19.0715Z" fill="#C65A24"/>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -250,33 +258,33 @@
         <div class="container">
             <div class="section-title text-center">
                 <img src="assets/img/icon/bed-icon.png" class="mb-4" alt="">
-                <h6 class="text-white">ACCOMODATION</h6>
-                <h4 class="text-white">A Perfect Sanctuary</h4>
+                <h6 class="subtitle text-white">ACCOMODATION</h6>
+                <h4 class="title  text-white">A Perfect Sanctuary</h4>
             </div>
             <div class="section-content text-center">
                 <ul>
                     <li>
-                        <h6>ROOMS</h6>
+                        <div class="title">ROOMS</div>
                         <p class="text-white">
-                            <a href="#">DELUX</a> | <a href="#">GRAND DELUX</a>
+                            <a href="#">DELUX</a>&nbsp; | &nbsp;<a href="#">GRAND DELUX</a>
                         </p>
                     </li>
                     <li>
-                        <h6>SUITES</h6>
+                        <div class="title">SUITES</div>
                         <p class="text-white">
-                            <a href="#">PREMIUM SUITES</a> | <a href="#">PRESIDENTIAL SUITE</a> | <a href="#">IMPERIAL SUITE</a> | <a href="#">ROYAL SUITE</a>
+                            <a href="#">PREMIUM SUITES</a>&nbsp; | &nbsp;<a href="#">PRESIDENTIAL SUITE</a>&nbsp; | &nbsp;<a href="#">IMPERIAL SUITE</a>&nbsp; | &nbsp;<a href="#">ROYAL SUITE</a>
                         </p>
                     </li>
                     <li>
-                        <h6>RESIDENCES</h6>
+                        <div class="title">RESIDENCES</div>
                         <p class="text-white">
-                            <a href="#">PLAZA ONE & TWO BEDROOM SUITES</a> | <a href="#">DELUXE ONE, TWO & THREE BEDROOM SUITES</a>
+                            <a href="#">PLAZA ONE & TWO BEDROOM SUITES</a>&nbsp; | &nbsp;<a href="#">DELUXE ONE, TWO & THREE BEDROOM SUITES</a>
                         </p>
                     </li>
                 </ul>
-                <p>
+                <div class="read-more">
                     <a href="#" class="btn-theme">VIEW ALL</a>
-                </p>
+                </div>
             </div>
         </div>
     </section>
@@ -290,9 +298,9 @@
     <section class="dining">
         <div class="container">
             <div class="section-title text-center">
-                <img src="assets/img/icon/bed-icon.png" class="mb-4" alt="">
-                <h6>DINING</h6>
-                <h4>Exceptional Gastronomic Journeys</h4>
+                <img src="assets/img/icon/dining-icon.png" class="mb-4" alt="DINING">
+                <h6 class="subtitle">DINING</h6>
+                <h4 class="title">Exceptional Gastronomic Journeys</h4>
             </div>
 
             <div class="swiper" id="dining_slider">
@@ -300,48 +308,78 @@
                     <div class="swiper-slide">
                         <div class="dining_item">
                             <div class="thumbnail">
-                                <img src="assets/img/dining/1.avif" alt="The Courtyard - The Plaza Doha">
+                                <a href="#">
+                                    <img src="assets/img/dining/1.avif" alt="The Courtyard - The Plaza Doha">
+                                </a>
                             </div>
                             <div class="content text-center">
-                                <h6 class="title">The Courtyard</h6>
+                                <h6 class="title text-theme">The Courtyard</h6>
                                 <p>
                                     Enjoy authentic flavors at Doha's finest Paris-inspired restaurant, where you can savor both local and international culinary creations in an opulent venue known for their exceptional presentation and quality.
                                 </p>
-                                <p>
-                                    <a href="#">KNOW MORE</a>
-                                </p>
+                                <div class="read-more">
+                                    <a href="#" class="text-link">
+                                        KNOW MORE
+                                        <span>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
+                                                <path d="M10.001 2.90361e-05C5.95604 -0.000699399 2.3091 2.43578 0.761194 6.17295C-0.786421 9.91027 0.0696256 14.2118 2.93074 17.0712C6.83569 20.9763 13.1666 20.9763 17.0714 17.0712C20.9762 13.1665 20.9762 6.83554 17.0714 2.93053C15.2004 1.04883 12.6545 -0.00638122 10.001 2.90361e-05ZM10.001 19.0715C5.00064 19.0715 0.930626 15.0013 0.930626 10.0009C0.930626 5.00046 5.00064 0.930389 10.001 0.930389C15.0014 0.930389 19.0715 5.00046 19.0715 10.0009C19.0715 15.0013 15.0014 19.0715 10.001 19.0715Z" fill="#C65A24"/>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="dining_item">
                             <div class="thumbnail">
-                                <img src="assets/img/dining/2.avif" alt="The Courtyard - The Plaza Doha">
+                                <a href="#">
+                                    <img src="assets/img/dining/2.avif" alt="The Courtyard - The Plaza Doha">
+                                </a>
                             </div>
                             <div class="content text-center">
-                                <h6 class="title">The Courtyard</h6>
+                                <h6 class="title text-theme">The Courtyard</h6>
                                 <p>
                                     Enjoy authentic flavors at Doha's finest Paris-inspired restaurant, where you can savor both local and international culinary creations in an opulent venue known for their exceptional presentation and quality.
                                 </p>
-                                <p>
-                                    <a href="#">KNOW MORE</a>
-                                </p>
+                                <div class="read-more">
+                                    <a href="#" class="text-link">
+                                        KNOW MORE
+                                        <span>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
+                                                <path d="M10.001 2.90361e-05C5.95604 -0.000699399 2.3091 2.43578 0.761194 6.17295C-0.786421 9.91027 0.0696256 14.2118 2.93074 17.0712C6.83569 20.9763 13.1666 20.9763 17.0714 17.0712C20.9762 13.1665 20.9762 6.83554 17.0714 2.93053C15.2004 1.04883 12.6545 -0.00638122 10.001 2.90361e-05ZM10.001 19.0715C5.00064 19.0715 0.930626 15.0013 0.930626 10.0009C0.930626 5.00046 5.00064 0.930389 10.001 0.930389C15.0014 0.930389 19.0715 5.00046 19.0715 10.0009C19.0715 15.0013 15.0014 19.0715 10.001 19.0715Z" fill="#C65A24"/>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="dining_item">
                             <div class="thumbnail">
-                                <img src="assets/img/dining/3.avif" alt="The Courtyard - The Plaza Doha">
+                                <a href="#">
+                                    <img src="assets/img/dining/3.avif" alt="The Courtyard - The Plaza Doha">
+                                </a>
                             </div>
                             <div class="content text-center">
-                                <h6 class="title">The Courtyard</h6>
+                                <h6 class="title text-theme">The Courtyard</h6>
                                 <p>
                                     Enjoy authentic flavors at Doha's finest Paris-inspired restaurant, where you can savor both local and international culinary creations in an opulent venue known for their exceptional presentation and quality.
                                 </p>
-                                <p>
-                                    <a href="#">KNOW MORE</a>
-                                </p>
+                                <div class="read-more">
+                                    <a href="#" class="text-link">
+                                        KNOW MORE
+                                        <span>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
+                                                <path d="M10.001 2.90361e-05C5.95604 -0.000699399 2.3091 2.43578 0.761194 6.17295C-0.786421 9.91027 0.0696256 14.2118 2.93074 17.0712C6.83569 20.9763 13.1666 20.9763 17.0714 17.0712C20.9762 13.1665 20.9762 6.83554 17.0714 2.93053C15.2004 1.04883 12.6545 -0.00638122 10.001 2.90361e-05ZM10.001 19.0715C5.00064 19.0715 0.930626 15.0013 0.930626 10.0009C0.930626 5.00046 5.00064 0.930389 10.001 0.930389C15.0014 0.930389 19.0715 5.00046 19.0715 10.0009C19.0715 15.0013 15.0014 19.0715 10.001 19.0715Z" fill="#C65A24"/>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -359,51 +397,28 @@
     <div class="areas_activity">
         <div class="container">
             <div class="section-title text-center">
-                <img src="assets/img/icon/bed-icon.png" class="mb-4" alt="">
-                <h6>AREAS & ACTIVITIES</h6>
-                <h4>Doha Diversions & Delights</h4>
+                <img src="assets/img/icon/areas-icon.png" class="mb-4" alt="AREAS & ACTIVITIES">
+                <h6 class="subtitle">AREAS & ACTIVITIES</h6>
+                <h4 class="title">Doha Diversions & Delights</h4>
             </div>
 
-            <div class="areas_items">
-                <div class="row">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="areas-item">
+            <div class="areas_items swiper" id="areas_activity_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="areas_activity_item">
                             <div class="thumbnail">
                                 <a href="#">
-                                    <img src="assets/img/areas/1.png" alt="">
+                                    <img src="assets/img/areas/1.png" alt="Arts & Culture">
                                 </a>
                             </div>
-                            <div class="content">
-                                <div class="title">
-                                    <a href="#">
-                                        ARTS & CULTURE
-
-                                        <span>
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
-                                                <path d="M10.001 2.90361e-05C5.95604 -0.000699399 2.3091 2.43578 0.761194 6.17295C-0.786421 9.91027 0.0696256 14.2118 2.93074 17.0712C6.83569 20.9763 13.1666 20.9763 17.0714 17.0712C20.9762 13.1665 20.9762 6.83554 17.0714 2.93053C15.2004 1.04883 12.6545 -0.00638122 10.001 2.90361e-05ZM10.001 19.0715C5.00064 19.0715 0.930626 15.0013 0.930626 10.0009C0.930626 5.00046 5.00064 0.930389 10.001 0.930389C15.0014 0.930389 19.0715 5.00046 19.0715 10.0009C19.0715 15.0013 15.0014 19.0715 10.001 19.0715Z" fill="#C65A24"/>
-                                            </svg>
-                                        </span>
-                                    </a>
-                                </div>
+                            <div class="content text-center">
+                                <h6 class="title text-theme">Arts & Culture</h6>
                                 <p>
                                     Join us as we go behind the scenes with the artists and innovators who are shaping Qatar’s vibrant culture and design scene.
                                 </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="areas-item">
-                            <div class="thumbnail">
-                                <a href="#">
-                                    <img src="assets/img/areas/2.png" alt="">
-                                </a>
-                            </div>
-                            <div class="content">
-                                <div class="title">
-                                    <a href="#">
-                                        SHOPPING
-
+                                <div class="read-more">
+                                    <a href="#" class="text-link">
+                                        KNOW MORE
                                         <span>
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
@@ -412,24 +427,26 @@
                                         </span>
                                     </a>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="areas_activity_item">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="assets/img/areas/2.png" alt="Shopping">
+                                </a>
+                            </div>
+                            <div class="content text-center">
+                                <h6 class="title text-theme">
+                                    Shopping
+                                </h6>
                                 <p>
                                     Prepare to be dazzled by the shopping secrets revealed in our latest issue of Qatar Now. Browse the treasures at Souq Waqif and get fashion inspiration from local tastemakers.
                                 </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="areas-item">
-                            <div class="thumbnail">
-                                <a href="#">
-                                    <img src="assets/img/areas/3.png" alt="">
-                                </a>
-                            </div>
-                            <div class="content">
-                                <div class="title">
-                                    <a href="#">
-                                        SPORT ACTIVITIES
-
+                                <div class="read-more">
+                                    <a href="#" class="text-link">
+                                        KNOW MORE
                                         <span>
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
@@ -438,9 +455,34 @@
                                         </span>
                                     </a>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="areas_activity_item">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="assets/img/areas/3.png" alt="Sport Activities">
+                                </a>
+                            </div>
+                            <div class="content text-center">
+                                <h6 class="title text-theme">
+                                    Sport Activities
+                                </h6>
                                 <p>
                                     Our latest issue of Qatar Now takes you on a journey across fascinating natural wonders, from pristine shores to the solitude (and exhilaration) of the desert.
                                 </p>
+                                <div class="read-more">
+                                    <a href="#" class="text-link">
+                                        KNOW MORE
+                                        <span>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
+                                                <path d="M10.001 2.90361e-05C5.95604 -0.000699399 2.3091 2.43578 0.761194 6.17295C-0.786421 9.91027 0.0696256 14.2118 2.93074 17.0712C6.83569 20.9763 13.1666 20.9763 17.0714 17.0712C20.9762 13.1665 20.9762 6.83554 17.0714 2.93053C15.2004 1.04883 12.6545 -0.00638122 10.001 2.90361e-05ZM10.001 19.0715C5.00064 19.0715 0.930626 15.0013 0.930626 10.0009C0.930626 5.00046 5.00064 0.930389 10.001 0.930389C15.0014 0.930389 19.0715 5.00046 19.0715 10.0009C19.0715 15.0013 15.0014 19.0715 10.001 19.0715Z" fill="#C65A24"/>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -458,38 +500,38 @@
     <div class="amenities">
         <div class="container">
             <div class="section-title text-center">
-                <img src="assets/img/icon/bed-icon.png" class="mb-4" alt="">
-                <h6>MAIN AMENITIES</h6>
-                <h4>Royalty Treatment</h4>
+                <img src="assets/img/icon/amenities-icon.png" class="mb-4" alt="">
+                <h6 class="subtitle">MAIN AMENITIES</h6>
+                <h4 class="title">Royalty Treatment</h4>
             </div>
 
-            <div class="amenities_items swiper" id="amenitiesSlider">
+            <div class="swiper" id="amenitiesSlider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="amenities_item">
                             <div class="thumbnail">
                                 <a href="#">
-                                    <img src="assets/img/amenities/1.png" alt="">
+                                    <img src="assets/img/amenities/1.png" alt="Swimming Pool">
                                 </a>
                             </div>
                             <div class="content text-center">
-                                <div class="title">
-                                    <a href="#">
-                                        Swimming Pool
-                                    </a>
-                                </div>
+                                <h6 class="title text-theme">
+                                    Swimming Pool
+                                </h6>
                                 <p>
                                     Dive into blissful relaxation from your centrally located Doha hotel. Relax by the pool or swim lengths perched over the city.
                                 </p>
-                                <p>
-                                    <a href="#">
+                                <div class="read-more">
+                                    <a href="#" class="text-link">
                                         KNOW MORE
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
-                                            <path d="M10.001 2.90361e-05C5.95604 -0.000699399 2.3091 2.43578 0.761194 6.17295C-0.786421 9.91027 0.0696256 14.2118 2.93074 17.0712C6.83569 20.9763 13.1666 20.9763 17.0714 17.0712C20.9762 13.1665 20.9762 6.83554 17.0714 2.93053C15.2004 1.04883 12.6545 -0.00638122 10.001 2.90361e-05ZM10.001 19.0715C5.00064 19.0715 0.930626 15.0013 0.930626 10.0009C0.930626 5.00046 5.00064 0.930389 10.001 0.930389C15.0014 0.930389 19.0715 5.00046 19.0715 10.0009C19.0715 15.0013 15.0014 19.0715 10.001 19.0715Z" fill="#C65A24"/>
-                                        </svg>
+                                        <span>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
+                                                <path d="M10.001 2.90361e-05C5.95604 -0.000699399 2.3091 2.43578 0.761194 6.17295C-0.786421 9.91027 0.0696256 14.2118 2.93074 17.0712C6.83569 20.9763 13.1666 20.9763 17.0714 17.0712C20.9762 13.1665 20.9762 6.83554 17.0714 2.93053C15.2004 1.04883 12.6545 -0.00638122 10.001 2.90361e-05ZM10.001 19.0715C5.00064 19.0715 0.930626 15.0013 0.930626 10.0009C0.930626 5.00046 5.00064 0.930389 10.001 0.930389C15.0014 0.930389 19.0715 5.00046 19.0715 10.0009C19.0715 15.0013 15.0014 19.0715 10.001 19.0715Z" fill="#C65A24"/>
+                                            </svg>
+                                        </span>
                                     </a>
-                                </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -497,27 +539,27 @@
                         <div class="amenities_item">
                             <div class="thumbnail">
                                 <a href="#">
-                                    <img src="assets/img/amenities/2.png" alt="">
+                                    <img src="assets/img/amenities/2.png" alt="Fitness Center">
                                 </a>
                             </div>
                             <div class="content text-center">
-                                <div class="title">
-                                    <a href="#">
-                                        Fitness Center
-                                    </a>
-                                </div>
+                                <h6 class="title text-theme">
+                                    Fitness Center
+                                </h6>
                                 <p>
                                     Find a new rhythm to your routine at our well-equipped fitness centre. Work out with some weights or build pace on the treadmill, with expert trainers to help you with your goals.
                                 </p>
-                                <p>
-                                    <a href="#">
+                                <div class="read-more">
+                                    <a href="#" class="text-link">
                                         KNOW MORE
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
-                                            <path d="M10.001 2.90361e-05C5.95604 -0.000699399 2.3091 2.43578 0.761194 6.17295C-0.786421 9.91027 0.0696256 14.2118 2.93074 17.0712C6.83569 20.9763 13.1666 20.9763 17.0714 17.0712C20.9762 13.1665 20.9762 6.83554 17.0714 2.93053C15.2004 1.04883 12.6545 -0.00638122 10.001 2.90361e-05ZM10.001 19.0715C5.00064 19.0715 0.930626 15.0013 0.930626 10.0009C0.930626 5.00046 5.00064 0.930389 10.001 0.930389C15.0014 0.930389 19.0715 5.00046 19.0715 10.0009C19.0715 15.0013 15.0014 19.0715 10.001 19.0715Z" fill="#C65A24"/>
-                                        </svg>
+                                        <span>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
+                                                <path d="M10.001 2.90361e-05C5.95604 -0.000699399 2.3091 2.43578 0.761194 6.17295C-0.786421 9.91027 0.0696256 14.2118 2.93074 17.0712C6.83569 20.9763 13.1666 20.9763 17.0714 17.0712C20.9762 13.1665 20.9762 6.83554 17.0714 2.93053C15.2004 1.04883 12.6545 -0.00638122 10.001 2.90361e-05ZM10.001 19.0715C5.00064 19.0715 0.930626 15.0013 0.930626 10.0009C0.930626 5.00046 5.00064 0.930389 10.001 0.930389C15.0014 0.930389 19.0715 5.00046 19.0715 10.0009C19.0715 15.0013 15.0014 19.0715 10.001 19.0715Z" fill="#C65A24"/>
+                                            </svg>
+                                        </span>
                                     </a>
-                                </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -525,27 +567,27 @@
                         <div class="amenities_item">
                             <div class="thumbnail">
                                 <a href="#">
-                                    <img src="assets/img/amenities/3.png" alt="">
+                                    <img src="assets/img/amenities/3.png" alt="Kid's Club">
                                 </a>
                             </div>
                             <div class="content text-center">
-                                <div class="title">
-                                    <a href="#">
-                                        Kids’ Club
-                                    </a>
-                                </div>
+                                <h6 class="title text-theme">
+                                    Kid's Club
+                                </h6>
                                 <p>
                                     Our Kids Club boasts a captivating indoor playground with climbing structures, slides, and creative zones. Enjoy peace of mind in our secure space as your children make friends, explore, and have a blast.
                                 </p>
-                                <p>
-                                    <a href="#">
+                                <div class="read-more">
+                                    <a href="#" class="text-link">
                                         KNOW MORE
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
-                                            <path d="M10.001 2.90361e-05C5.95604 -0.000699399 2.3091 2.43578 0.761194 6.17295C-0.786421 9.91027 0.0696256 14.2118 2.93074 17.0712C6.83569 20.9763 13.1666 20.9763 17.0714 17.0712C20.9762 13.1665 20.9762 6.83554 17.0714 2.93053C15.2004 1.04883 12.6545 -0.00638122 10.001 2.90361e-05ZM10.001 19.0715C5.00064 19.0715 0.930626 15.0013 0.930626 10.0009C0.930626 5.00046 5.00064 0.930389 10.001 0.930389C15.0014 0.930389 19.0715 5.00046 19.0715 10.0009C19.0715 15.0013 15.0014 19.0715 10.001 19.0715Z" fill="#C65A24"/>
-                                        </svg>
+                                        <span>
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.5395 4.1709C11.3168 3.94303 10.9556 3.94303 10.7326 4.1709C10.5098 4.39858 10.5098 4.76815 10.7326 4.99602L15.0539 9.41512H3.57238C3.25634 9.41512 3 9.67727 3 10.0005C3 10.3238 3.25634 10.5858 3.57238 10.5858H15.0482L10.7269 15.0049C10.6197 15.1142 10.5595 15.2628 10.5595 15.4175C10.5595 15.5725 10.6197 15.7208 10.7269 15.8302C10.8341 15.9407 10.9809 16.002 11.1333 16C11.2851 15.9992 11.4308 15.9384 11.5395 15.8302L16.8338 10.4162C16.9415 10.3059 17.0016 10.1561 17 10.0005C16.9989 9.84519 16.9394 9.6967 16.8338 9.58506L11.5395 4.1709Z" fill="#C65A24"/>
+                                                <path d="M10.001 2.90361e-05C5.95604 -0.000699399 2.3091 2.43578 0.761194 6.17295C-0.786421 9.91027 0.0696256 14.2118 2.93074 17.0712C6.83569 20.9763 13.1666 20.9763 17.0714 17.0712C20.9762 13.1665 20.9762 6.83554 17.0714 2.93053C15.2004 1.04883 12.6545 -0.00638122 10.001 2.90361e-05ZM10.001 19.0715C5.00064 19.0715 0.930626 15.0013 0.930626 10.0009C0.930626 5.00046 5.00064 0.930389 10.001 0.930389C15.0014 0.930389 19.0715 5.00046 19.0715 10.0009C19.0715 15.0013 15.0014 19.0715 10.001 19.0715Z" fill="#C65A24"/>
+                                            </svg>
+                                        </span>
                                     </a>
-                                </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -630,12 +672,30 @@
     ================================================== -->
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <!-- <script src="assets/js/theme.js"></script> -->
     <!-- <script src="assets/js/wow.min.js"></script> -->
     <script src="assets/js/swiper-bundle.min.js"></script>
     <!-- <script src="assets/js/glightbox.min.js"></script> -->
     <!-- <script src="assets/js/select2.full.min.js"></script> -->
     <script src="assets/js/script.js"></script>
+
+    <script>
+        $(".datepicker").flatpickr({
+            minDate: "today",
+            altInput: true,
+            altFormat: "j F, Y",
+            dateFormat: "Y-m-d",
+            defaultDate: "today" 
+        });
+        $("#departureDate").flatpickr({
+            altInput: true,
+            altFormat: "j F, Y",
+            dateFormat: "Y-m-d",
+            defaultDate: new Date().fp_incr(14) // 14 days from now
+        });
+    </script>
 
 </body>
 </html>
