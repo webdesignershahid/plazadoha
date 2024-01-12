@@ -3,5 +3,35 @@
 --------------------------------------------------------------*/
 footer {
     background-color: #091916;
-    padding: 10rem 0 5rem;
+    padding: 10rem 0 3rem;
+
+
+
+    .contact-info {
+        margin: 5rem 0 3rem;
+        font-size: 1.8rem;
+        font-weight: normal;
+        
+        a {
+            font-size: 1.8rem;
+            color: #EEE9E1;
+        }
+    }
+
+    .social-contacts {
+        border: .1rem solid $color__theme;
+        display: inline-flex;
+        justify-content: center;
+        margin: 6rem auto;
+        a {
+            padding: 1rem;
+            & + a {
+                border-left: .1rem solid $color__theme;
+            }
+        }
+    }
+    .copyright {
+        font-size: 1.8rem;
+        color: #EEE9E1;
+    }
 }

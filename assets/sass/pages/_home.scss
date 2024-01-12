@@ -200,14 +200,13 @@
                 font-style: italic;
             }
             p {
-                margin: 2rem 1rem;
+                margin: 2rem;
                 line-height: 1.4;
                 display: -webkit-box;
                 -webkit-line-clamp: 4;
                 -webkit-box-orient: vertical;  
                 overflow: hidden;
             }
-            .read-more {}
         }
 
         &:hover {
@@ -244,14 +243,13 @@
                 font-style: italic;
             }
             p {
-                margin: 2rem 1rem;
+                margin: 2rem;
                 line-height: 1.4;
                 display: -webkit-box;
                 -webkit-line-clamp: 4;
                 -webkit-box-orient: vertical;  
                 overflow: hidden;
             }
-            .read-more {}
         }
 
         &:hover {
@@ -287,21 +285,19 @@
                 font-style: italic;
             }
             p {
-                margin: 2rem 1rem;
+                margin: 2rem;
                 line-height: 1.4;
                 display: -webkit-box;
                 -webkit-line-clamp: 4;
                 -webkit-box-orient: vertical;  
                 overflow: hidden;
             }
-            .read-more {}
         }
-
         &:hover {
             .thumbnail img {
                 transform: scale(1.15);
             }
-        }
+        }        
     }
 }
 .events {
@@ -317,5 +313,33 @@
         inset: 0;
         background-color: rgba(#2B1719, .7);
         z-index: -1;
+        mix-blend-mode: multiply;
+    }
+
+    .section-title {
+        margin-bottom: 6rem;
+    }
+
+    .section-contents {
+        .title {
+            font-size: 2.6rem;
+            margin-bottom: 2rem;
+        }
+
+        ul {
+            li {
+                a {
+                    font-size: 2.4rem;
+                    color: #E6DED0;
+                }
+                & + li {
+                    margin-top: 3rem;
+                }
+            }
+        }
+
+        .read-more {
+            margin-top: 5rem;
+        }
     }
 }

@@ -5114,7 +5114,32 @@ header .right-block .menu a:hover {
 --------------------------------------------------------------*/
 footer {
   background-color: #091916;
-  padding: 10rem 0 5rem;
+  padding: 10rem 0 3rem;
+}
+footer .contact-info {
+  margin: 5rem 0 3rem;
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+footer .contact-info a {
+  font-size: 1.8rem;
+  color: #EEE9E1;
+}
+footer .social-contacts {
+  border: 0.1rem solid #C65A24;
+  display: inline-flex;
+  justify-content: center;
+  margin: 6rem auto;
+}
+footer .social-contacts a {
+  padding: 1rem;
+}
+footer .social-contacts a + a {
+  border-left: 0.1rem solid #C65A24;
+}
+footer .copyright {
+  font-size: 1.8rem;
+  color: #EEE9E1;
 }
 
 /*--------------------------------------------------------------
@@ -5291,7 +5316,7 @@ footer {
   font-style: italic;
 }
 .dining_item .content p {
-  margin: 2rem 1rem;
+  margin: 2rem;
   line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 4;
@@ -5327,7 +5352,7 @@ footer {
   font-style: italic;
 }
 .areas_activity_item .content p {
-  margin: 2rem 1rem;
+  margin: 2rem;
   line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 4;
@@ -5363,7 +5388,7 @@ footer {
   font-style: italic;
 }
 .amenities_item .content p {
-  margin: 2rem 1rem;
+  margin: 2rem;
   line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 4;
@@ -5387,6 +5412,24 @@ footer {
   inset: 0;
   background-color: rgba(43, 23, 25, 0.7);
   z-index: -1;
+  mix-blend-mode: multiply;
+}
+.events .section-title {
+  margin-bottom: 6rem;
+}
+.events .section-contents .title {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+.events .section-contents ul li a {
+  font-size: 2.4rem;
+  color: #E6DED0;
+}
+.events .section-contents ul li + li {
+  margin-top: 3rem;
+}
+.events .section-contents .read-more {
+  margin-top: 5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
