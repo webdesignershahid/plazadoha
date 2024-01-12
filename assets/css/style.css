@@ -5134,6 +5134,111 @@ header .right-block .menu a:hover {
   color: #C65A24;
 }
 
+.drawerMenu {
+  position: fixed;
+  z-index: 1024;
+  top: 7.95rem;
+  right: -30rem;
+  background: #FAF8F6;
+  padding: 4rem 6rem;
+  width: 30rem;
+  height: calc(100% - 7.95rem);
+  box-shadow: 0 1rem 1rem 0 rgba(71, 38, 40, 0.1);
+  transition: all 0.5s ease;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.drawerMenu::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .drawerMenu {
+    top: 9.95rem;
+    width: 65rem;
+    right: -65rem;
+    max-height: 45rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .drawerMenu {
+    top: 12.5rem;
+    max-height: 50rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .drawerMenu {
+    padding: 4rem 8rem;
+    width: 90rem;
+    right: -90rem;
+    max-height: 60rem;
+  }
+}
+.drawerMenu.sidemenu-open {
+  right: 0;
+}
+.drawerMenu .closeMenu {
+  position: absolute;
+  left: 3rem;
+  top: 2rem;
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+}
+.drawerMenu ul {
+  list-style-type: decimal-leading-zero;
+  padding-left: 3.5rem;
+  overflow: hidden;
+}
+.drawerMenu ul li {
+  font-family: "FreightBigProBook", sans-serif;
+  color: #4D2322;
+  font-size: 1.8rem;
+  padding: 0.5rem 0;
+  transition: all 0.25s ease;
+}
+@media screen and (min-width: 1200px) {
+  .drawerMenu ul li {
+    font-size: 2.4rem;
+  }
+}
+.drawerMenu ul li + li {
+  margin-top: 0.5rem;
+}
+.drawerMenu ul li a {
+  font-size: 1.8rem;
+}
+@media screen and (min-width: 1200px) {
+  .drawerMenu ul li a {
+    font-size: 2.4rem;
+  }
+}
+.drawerMenu ul li img {
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  width: auto;
+  max-height: calc(100% - 8rem);
+  transform: scale(0.95);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 767px) {
+  .drawerMenu ul li img {
+    display: none;
+  }
+}
+.drawerMenu ul li.menu-active {
+  font-family: "FreightBigProBold", sans-serif;
+  color: #C65A24;
+}
+.drawerMenu ul li.menu-active img {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
 /*--------------------------------------------------------------
 # Header-block End
 --------------------------------------------------------------*/

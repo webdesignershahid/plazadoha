@@ -72,6 +72,104 @@ header {
         }
     }
 }
+
+.drawerMenu {
+    position: fixed;
+    z-index: 1024;
+    top: 7.95rem;
+    right: -30rem;
+    background: #FAF8F6;
+    padding: 4rem 6rem;
+    width: 30rem;
+    height: calc(100% - 7.95rem);
+    box-shadow: 0 1rem 1rem 0 rgba(71, 38, 40, 0.1);
+    transition: all .5s ease;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    @include md-up {
+        top: 9.95rem;
+        width: 65rem;
+        right: -65rem;
+        max-height: 45rem;
+    }
+    @include lg-up {
+        top: 12.5rem;
+        max-height: 50rem;
+    }
+    @include xl-up {
+        padding: 4rem 8rem;
+        width: 90rem;
+        right: -90rem;
+        max-height: 60rem;
+    }
+
+    &.sidemenu-open {
+        right: 0;
+    }
+    .closeMenu {
+        position: absolute;
+        left: 3rem;
+        top: 2rem;
+        border: 0;
+        background-color: transparent;
+        padding: 0;
+    }
+    ul {
+        list-style-type: decimal-leading-zero;
+        padding-left: 3.5rem;
+        overflow: hidden;
+        li {
+            font-family: $font__freight_book;
+            color: #4D2322;
+            font-size: 1.8rem;
+            padding: .5rem 0;
+            transition: all .25s ease;
+            @include xl-up {
+                font-size: 2.4rem;
+            }
+
+            & + li {
+                margin-top: .5rem;
+            }
+            a {
+                font-size: 1.8rem;
+                @include xl-up {
+                    font-size: 2.4rem;
+                }
+            }
+            img {
+                position: absolute;
+                top: 4rem;
+                right: 4rem;
+                width: auto;
+                max-height: calc(100% - 8rem);
+                transform: scale(.95);
+                opacity: 0;
+                visibility: hidden;
+                transition: all .5s ease-in-out;
+
+                @include md-down {
+                    display: none;
+                }
+            }
+
+            &.menu-active {
+                font-family: $font__freight_bold;
+                color: $color__theme;
+                img {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
 /*--------------------------------------------------------------
 # Header-block End
 --------------------------------------------------------------*/

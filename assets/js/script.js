@@ -38,7 +38,14 @@
                 // });
             
             };
-            mobile_menu('.navbar-toggler, .close-menu', '.mobile-menu');  
+            mobile_menu('.navbar-toggler, .closeMenu', '.drawerMenu');  
+
+
+            /*========== Active Hover  ==========*/
+            $(".drawerMenu ul li").hover(function () {
+                $(".drawerMenu ul li").removeClass("menu-active");
+                $(this).addClass("menu-active");
+            });
         },
         
         /* ============================================================ */
@@ -74,24 +81,6 @@
                 autoplay: {
                     delay: 5000
                 },
-                // breakpoints: {
-                //     576: {
-                //         slidesPerView: 2,
-                //     },
-                //     768: {
-                //         slidesPerView: 3,
-                //     },
-                //     992: {
-                //         slidesPerView: 4,
-                //     },
-                //     1200: {
-                //         slidesPerView: 5,
-                //     },
-                // },
-                // navigation: {
-                //     nextEl: ".cabinet-carousel .swiper .swiper-button-next",
-                //     prevEl: ".cabinet-carousel .swiper .swiper-button-prev",
-                // },
             });
             // Homepage Dining Slider
             let diningSlider = new Swiper ('#dining_slider, #areas_activity_slider, #amenitiesSlider', {
@@ -155,10 +144,10 @@
 		thePlazaDoha  .initialize();
 	});
     ///============= Wow JS =============\\\
-    // wow = new WOW({
-    //     mobile: false,
-    // });
-    // wow.init();
+    wow = new WOW({
+        mobile: false,
+    });
+    wow.init();
 
 
 })(jQuery);
