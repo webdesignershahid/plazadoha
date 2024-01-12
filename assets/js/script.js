@@ -144,7 +144,7 @@
 		thePlazaDoha  .initialize();
 	});
     ///============= Wow JS =============\\\
-    wow = new WOW({
+    var wow = new WOW({
         mobile: false,
     });
     wow.init();
